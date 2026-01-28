@@ -11,20 +11,23 @@ class Rectangle():
     # Create the "__str__" method
     # YOUR CODE HERE
     def __str__(self):
-        return f"A rectangle with width {self.width} and height {self.height}"
-
+        # return f"A rectangle with width {self.width} and height {self.height}"
+        return "A rectangle with width {} and height {}.".format(self.width, self.height)
 
     # Create the "area_calculator" method
     # YOUR CODE HERE
     def area_calculator(self):
-        return float(self.width ** self.height)
+        return self.width * self.height
 
 
     # Create the "__eq__" method
     # Returns a boolean value
     # YOUR CODE HERE
-    def __eq__ (self):
-
+    def __eq__ (self, other):
+        if self.width == other.width and self.height == other.height:
+            return True
+        else:
+            return False
     
 
 def main():
